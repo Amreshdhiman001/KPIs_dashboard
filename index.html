@@ -10,7 +10,7 @@
     <body>
       <h1>Issue Management Dashboard</h1>
 
-        <!---KPIs Section ---->
+        
         <div>
           <h2>Key Performance Indicators (KPIs)</h2>
           <ul>
@@ -23,18 +23,18 @@
               <span id="openIssues">Loading...</span>
             </li>
               
-              <!-- Add more KPIs a needed -->
+              
           </ul>
         </div>
               
-        <!-- Chart Section -->
+        
         <div style="width:80%; margin:auto;">
               <!-- Create a canvas element where the chart will be rendered -->
               <canvas id="issueStatusChart"></canvas>
         </div>
 
         <script>
-           // Sample data for the issue status chart
+           
             var issueStatusData = {
               labels: ['Open', 'In Progress', 'Resolved', 'Closed'],
               datasets: [{
@@ -46,7 +46,7 @@
               }]
             };
 
-        // Configuration options for the issue status chart
+        
         var issueStatusOptions = {
           scales: {
                 y: {
@@ -54,25 +54,25 @@
                   }
                 }
             };
-        // Get the canvas element for the issue status chart
+        
         var issueStatusCtx = document.getElementById('issueStatusChart').getContext('2d');
 
-        // Create the issue status chart
+        
         var issueStatusChart = new Chart(issueStatusCtx, {
             type: 'bar',
           data: issueStatusData,
           options: issueStatusOptions
         });
 
-        // Simulate asynchronous data fetching for KPIs
+        
         setTimeout(function() {
           // Update Average Issue Resolution Time
           var avgResolutionTimeElement = document.getElementById('avgResolutionTime');
-          avgResolutionTimeElement.textContent = '3 days';        // Replace with actual value
+          avgResolutionTimeElement.textContent = '3 days';        
 
-          // Update open Issues
+          
           var openIssuesElement = document.getElementById('openIssues');
-          openIssuesElement.textContent ='20';        // Replace with actual value
+          openIssuesElement.textContent ='20';        
           }, 2000);  // Simulating a delay of 2 second
         </script>
       
