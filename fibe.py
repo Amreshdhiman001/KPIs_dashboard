@@ -1,4 +1,4 @@
- import math
+ # Removed maths library dependency
 
  def isPerfectSquare(x):
      s = int(math.sqrt(x))
