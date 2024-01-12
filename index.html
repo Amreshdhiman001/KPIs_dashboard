@@ -19,7 +19,7 @@
               <span id="avgResolutionTime">Loading...</span>
             </li>
             <li>
-            <strong>Open Issues: </strong>
+              <strong>Open Issues: </strong>
               <span id="openIssues">Loading...</span>
             </li>
               
@@ -36,7 +36,7 @@
         <script>
            // Sample data for the issue status chart
             var issueStatusData = {
-              labels: ['Open', 'In Progress', 'Resolved', 'Close'],
+              labels: ['Open', 'In Progress', 'Resolved', 'Closed'],
               datasets: [{
                 label: 'Issue Status',
                 backgroundColor: ['rgba(255, 99, 132, 0.2)' 'rgba(255, 205, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(54, 162, 235, 0.2)'],
@@ -49,16 +49,16 @@
         // Configuration options for the issue status chart
         var issueStatusOptions = {
           scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
-        };
+                y: {
+                  beginAtZero: true
+                  }
+                }
+            };
         // Get the canvas element for the issue status chart
         var issueStatusCtx = document.getElementById('issueStatusChart').getContext('2d');
 
         // Create the issue status chart
-        var issueStatusChart = new Chart(issuesStatusCtx, {
+        var issueStatusChart = new Chart(issueStatusCtx, {
             type: 'bar',
           data: issueStatusData,
           options: issueStatusOptions
@@ -68,11 +68,11 @@
         setTimeout(function() {
           // Update Average Issue Resolution Time
           var avgResolutionTimeElement = document.getElementById('avgResolutionTime');
-          avgResolutionTimeElement.textContent = '3 days'; // Replace with actual value
+          avgResolutionTimeElement.textContent = '3 days';        // Replace with actual value
 
           // Update open Issues
           var openIssuesElement = document.getElementById('openIssues');
-          openIssuesElement.textContent ='20'; // Replace with actual value
+          openIssuesElement.textContent ='20';        // Replace with actual value
           }, 2000);  // Simulating a delay of 2 second
         </script>
       
